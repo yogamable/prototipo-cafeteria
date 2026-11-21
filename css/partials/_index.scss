@@ -1,0 +1,679 @@
+html{
+    scroll-padding: 5rem;
+    scroll-behavior: smooth;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-top: 5.5rem;
+    
+    .s-hero{
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        display: grid;
+        grid-template-areas: "h1 h2 h4" 
+                             "h1 h3 h4";
+        grid-template-columns: 1.5fr 2fr 1.5fr;
+        grid-template-rows: repeat(2, 20rem);
+        
+        .div-titulo{
+            position: absolute;
+            z-index: 1;
+            top: 30%;
+            width: 100%;
+            mix-blend-mode: lighten;
+            
+            h1{
+                font-family: "Fleur De Leah", cursive;
+                font-weight: 100;
+                font-size: 4rem;
+                text-align: center;
+                background: rgb(88, 202, 202);
+                padding: 1rem;
+                &::first-letter{
+                    font-size: 10rem;
+                }
+            }
+        }
+        .div-hero{
+            min-height: 0;
+            overflow: hidden;
+            
+            img{
+                display: block;
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+
+        }
+
+        .hero-1{
+            grid-area: h1;
+        }
+        .hero-2{
+            grid-area: h2;
+            img{
+                object-position: 0 30%;
+            }
+        }
+        .hero-3{
+            grid-area: h3;
+            img{
+                object-position: 0 70%;
+            }
+        }
+        .hero-4{
+            grid-area: h4;
+        }
+    }
+
+    .s-promocion{
+        padding: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        width: 100%;
+
+        .div-titulo{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+
+            h2{
+                span{
+                    font-family: "Fleur De Leah", cursive;
+                    font-size: 4rem;
+                    font-weight: 100;
+                }
+                font-family: "Montserrat", sans-serif;
+                font-size: 2rem;
+                font-weight: 200;
+                text-align: center;
+                line-height: 2.5rem;
+                &::first-letter{
+                    font-size: 10rem;
+                }
+            }
+        }
+
+        .div-promociones{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    
+            .div-prom{
+                background: white;
+                padding: 1rem;
+                margin: 0;
+                .card{
+                    padding-bottom: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 18rem;
+                    height: 100%;
+                    background-color: rgb(88, 202, 202);
+                    border-radius: 1rem;
+    
+                    .card-img{
+                        height: 12rem;
+                        width: 100%;
+                        img{
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                            border-radius: 1rem 1rem 0 0;
+                        }
+                    }
+                    .card-text{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1rem;
+                        color: white;
+    
+                        h3{
+                            text-align: center;
+                            font-size: 1.5rem;
+                            font-weight: 800;
+                        }
+                        p{
+                            border-top: 1px solid white;
+                            border-bottom: 1px solid white;
+                            padding: 1rem 0;
+                            text-align: center;
+                            overflow-wrap: break-word;
+                        }
+                    }
+                    .card-precio{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        p{
+                            font-size: 2rem;
+                            font-weight: 600;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        
+        @media screen and (max-width: 1380px) {
+            flex-direction: column;                
+        }
+    }
+
+    .s-catalogo{
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        background-color: rgb(88, 202, 202, .8);
+
+        .div-titulo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            line-height: 5rem;
+            text-align: center;
+
+            h2{
+                font-family: "Fleur De Leah", cursive;
+                font-size: 4rem;
+                font-weight: 100;
+                padding-right: .5rem;
+
+                &::first-letter{
+                    font-size: 10rem;
+                }
+            }
+            p{
+                font-family: "Montserrat", sans-serif;
+                font-size: 2rem;
+                font-weight: 100;
+            }
+        }
+
+        .carousel {
+            --gap: 3rem;
+            --visibles: 4;
+
+            .carousel-viewport {
+                               
+                .catalogo-cards{
+                    display: flex;
+                    
+                    .card-p{
+                        display: block;
+                        height: 25rem;
+                        border-radius: 1rem;
+                        .card-p-img{
+                            display: block;
+                            height: 10rem;
+                            width: 100%;
+                            img{
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                                border-radius: 1rem 1rem 0 0;
+                            }
+                        }
+                        .card-p-text{
+                            padding: 1rem;
+                            height: 13rem;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 1rem;
+                            text-align: center;
+                            background: rgb(255, 255, 255, .5);
+                            border-radius: 0 0 1rem 1rem;
+        
+                            h3{
+                                font-size: 1.2rem;
+                                border-bottom: 1px solid white;
+                                padding-bottom: 1rem;
+                                color: rgb(88, 202, 202);
+                            }
+                            p{
+                                font-size: 1rem;
+                                font-weight: 500;
+                                color: white;
+                            }
+                            .tostion{
+                                border-top: 1px solid white;
+                                padding-top: 1rem;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                gap: .5rem;
+                                .nivel{
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    .material-symbols-outlined{
+                                        font-size: 1rem;
+                                        color: rgb(88, 202, 202);
+                                    }
+                                    .i-sin {
+                                        font-variation-settings:
+                                        'FILL' 0,
+                                        'wght' 300,
+                                        'GRAD' -25,
+                                        'opsz' 24;
+                                    }
+                                    .i-con {
+                                        font-variation-settings:
+                                        'FILL' 1,
+                                        'wght' 300,
+                                        'GRAD' -25,
+                                        'opsz' 24;
+                                    }
+                                }
+                                p{
+                                    color: rgb(88, 202, 202);
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+        
+                    .c1{
+                        .card-p-img img{
+                            object-position: 0 60%;
+                        }
+                    }
+                    .c2{
+                        .card-p-img img{
+                            object-position: 0 90%;
+                        }
+                    }
+                }
+            }
+
+            .carousel-btn {
+                flex: none;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                color: rgb(88, 202, 202, .8);
+                .material-symbols-outlined{
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+
+    .s-conocenos{
+        padding: 4rem 4rem 15rem 4rem;
+        display: grid;
+        grid-template-areas: "div-titulo conocenos-img";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        column-gap: 2rem;
+
+        .div-titulo{
+            grid-area: div-titulo;
+            h2{
+                font-family: "Fleur De Leah", cursive;
+                font-size: 4rem;
+                font-weight: 100;
+                padding-right: .5rem;
+
+                &::first-letter{
+                    font-size: 10rem;
+                }
+            }
+        }
+
+        .conocenos-img{
+            grid-area: conocenos-img;
+            position: relative;
+            height: 20rem;
+            width: 100%;
+            img{
+                position: absolute;
+                object-fit: cover;
+            }
+            .c-img-1{
+                z-index: 3;
+                border: 10px solid white;
+                height: 100%;
+                width: 70%;
+                object-position: 0 60%;
+                top: 20%;
+                right: 0;
+            }
+            .c-img-2{
+                z-index: 2;
+                border: 10px solid white;
+                height: 80%;
+                width: 50%;
+                top: 60%;
+                left: 5%;
+            }
+            .c-img-3{
+                z-index: 5;
+                border: 10px solid white;
+                height: 70%;
+                width: 50%;
+                top: 0;
+                left: 0;
+            }
+            .c-img-4{
+                z-index: 6;
+                border: 10px solid white;
+                height: 60%;
+                width: 40%;
+                top: 100%;
+                left: 50%;
+            }
+        }
+    }
+
+    .s-encuentranos{
+        padding: 6rem 4rem;
+        position: relative;
+        display: grid;
+        grid-template-areas: "titulo horarios mapa";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 2rem;
+        width: 100%;
+        height: 30rem;
+
+        .bg-section{
+            position: absolute;
+            z-index: 0;
+            height: 100%;
+            width: 100%;
+            img{
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .div-titulo{
+            grid-area: titulo;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            h2{
+                font-family: "Fleur De Leah", cursive;
+                font-size: 4rem;
+                font-weight: 100;
+                padding-right: .5rem;
+                color: white;
+                text-align: start;
+                
+                &::first-letter{
+                    font-size: 10rem;
+                }
+            }
+        }
+        
+        .horario{
+            z-index: 1;
+            grid-area: horarios;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            border: 10px solid white;
+            background: rgb(255, 255, 255, .5);
+            
+            .div-titulo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                h3{
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    text-align: center;
+                }
+            }
+            .div-horario{
+                display: flex;
+                justify-content: center;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+
+                    li{
+                        .dias{
+                            font-size: 1.2rem;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+                        .hora{
+                            font-size: 2rem;
+                        }
+                    }
+                }
+            }
+
+        }
+        .div-mapa{
+            grid-area: mapa;
+            z-index: 1;
+            height: 20rem;
+            iframe{
+                height: 22rem;
+                width: 20rem;
+                border: 10px solid white;
+                opacity: .9;    
+            }
+        }
+
+    }
+
+    .s-opiniones{
+        padding: 4rem 0 6rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .div-titulo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            h2{
+                font-family: "Fleur De Leah", cursive;
+                font-size: 4rem;
+                font-weight: 100;
+                padding-right: .5rem;
+                
+                &::first-letter{
+                    font-size: 10rem;
+                }
+            }
+        }
+
+        .carousel{
+            --visibles: 3;
+            --gap: 1rem;
+
+            .carousel-viewport{
+                .div-cards{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    .card{
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 1rem;
+                        height: 18rem;
+                        background: rgb(88, 202, 202, .3);
+                        border-radius: 1rem;
+                        padding: 1rem;
+                        transition: all .5s ease-in-out;
+                        .nombre{
+                            p{
+                                font-family: "Fleur De Leah", cursive;
+                                font-size: 3rem;
+                                color: rgb(88, 202, 202);
+                            }
+                        }
+                        .valoracion{
+                            .material-symbols-outlined {
+                                font-variation-settings:
+                                'FILL' 1,
+                                'wght' 200,
+                                'GRAD' -25,
+                                'opsz' 24;
+                                color: rgb(88, 202, 202);
+                            }
+                        }
+                        .opinion{
+                            text-align: center;
+                            overflow-wrap: break-word;
+                            font-weight: 300;
+                        }
+                        
+                        &:hover{
+                            background: rgb(88, 202, 202, .1);
+                        }
+                    }
+                }
+            }
+
+            .carousel-btn {
+                flex: none;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                color: rgb(88, 202, 202, .8);
+                .material-symbols-outlined{
+                    font-size: 5rem;
+                }
+            }
+        }
+    }
+
+    .s-contacto{
+        padding: 6rem 0;
+        display: grid;
+        grid-template-areas: "div-titulo div-form";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        column-gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        height: 35rem;
+
+        .bg-contacto{
+            position: absolute;
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            img{
+                object-fit: cover;
+                object-position: 0 50%;
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .div-titulo{
+            z-index: 3;
+            grid-area: div-titulo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            h2{
+                font-family: "Fleur De Leah", cursive;
+                font-size: 4rem;
+                font-weight: 100;
+                color: white;
+
+                &::first-letter{
+                    font-size: 10rem;
+                }
+            }
+        }
+        .div-form{
+            z-index: 3;
+            grid-area: div-form;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                color: rgb(88, 202, 202);
+                width: 100%;
+                
+                input{
+                    text-align: center;
+                    font-size: 1.1rem;
+                    border-radius: .5rem;
+                    border: 1px solid rgb(255, 255, 255, .5);
+                    padding: 1rem;
+                    width: 50%;
+                    background: rgb(88, 202, 202, .7);
+                    transition: all .2s ease-in-out;
+                    &::placeholder{
+                        color: white;
+                    }
+                    &:focus{
+                        background: rgb(88, 202, 202, .8);
+                        outline: none;
+                    }
+                }
+                button{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 30%;
+                    padding: .5rem;
+                    background: rgb(255, 255, 255, .8);
+                    border-radius: .5rem;
+                    border: none;
+                    color: rgb(88, 202, 202);
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    transition: all .2s ease-in-out;
+                    
+                    &:hover{
+                        background: rgb(88, 202, 202);
+                        color: rgb(255, 255, 255, .8);
+
+                    }
+                }
+            }
+            
+        }
+
+    }
+}

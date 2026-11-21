@@ -1,0 +1,154 @@
+.footer{
+    padding: 6rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    background: rgb(88, 202, 202, .2);
+    color: rgb(88, 202, 202);
+    .f-contacto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: .5rem;
+
+        p{
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+            font-size: 1rem;
+            gap: 1rem;
+            text-align: start;
+
+            &:hover{
+                color: rgb(255, 255, 255, .5);
+            }
+
+            .material-symbols-outlined {
+              font-variation-settings:
+              'FILL' 0,
+              'wght' 300,
+              'GRAD' -25,
+              'opsz' 24;
+              font-size: 1.8rem;
+            }
+        }
+    }
+    .f-nav{
+        display: flex;
+        align-items: center;
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+
+            li{
+                list-style-type: none;
+
+                a{
+                    text-decoration: none;
+                    color: rgb(88, 202, 202);
+                    font-weight: 500;
+                    &:hover{
+                        color: rgb(255, 255, 255, .5);
+                    }
+                }
+            }
+        }
+    }
+    .f-redes{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 1rem;
+
+        p{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+            &:hover{
+                color: rgb(255, 255, 255, .5);
+            }
+            
+            .material-symbols-outlined {
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 300,
+                'GRAD' -25,
+                'opsz' 24;
+                font-size: 2rem;
+            }
+        }
+    }
+    .f-derechos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        .div-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .logo{
+                display: flex;
+                align-items: center;
+                font-family: "Fleur De Leah", cursive;
+                font-size: 3rem;
+                font-weight: 500;
+                text-decoration: none;
+                color: rgb(88, 202, 202);
+                transition: color .6s ease-in-out;
+                .material-symbols-outlined {
+                    font-variation-settings:
+                    'FILL' 0,
+                    'wght' 100,
+                    'GRAD' -25,
+                    'opsz' 24;
+                    font-size: 6rem;
+                    color: rgb(88, 202, 202);
+                    transition: color .6s ease-in-out;
+                }
+            }
+            &:hover{
+                .logo{
+                    color: rgb(255, 255, 255, .5);
+                }
+                .material-symbols-outlined{
+                    font-variation-settings:
+                    'FILL' 1,
+                    'wght' 100,
+                    'GRAD' -25,
+                    'opsz' 24;
+                    color: rgb(255, 255, 255, .5);
+                }
+        }
+        }
+        .div-derechos{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            p{
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                text-align: center;
+                color: rgb(88, 202, 202);
+                transition: all .5s ease-in-out;
+                .material-symbols-outlined {
+                    font-variation-settings:
+                    'FILL' 0,
+                    'wght' 300,
+                    'GRAD' -25,
+                    'opsz' 24;
+                    font-size: 1.5rem;
+                    transition: all .5s ease-in-out;
+                }
+                &:hover{
+                    color: rgb(255, 255, 255, .5);
+                }
+            }
+        }
+    }
+}

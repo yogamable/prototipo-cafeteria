@@ -1,0 +1,839 @@
+@import url("https://fonts.googleapis.com/css2?family=Fleur+De+Leah&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.carousel {
+  --gap: 1.5rem;
+  --visibles: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .carousel {
+    --visibles: 1;
+  }
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--gap);
+  will-change: transform;
+}
+.carousel-track > * {
+  flex: 0 0 calc((100% - var(--gap) * (var(--visibles) - 1)) / var(--visibles));
+  min-width: 0;
+}
+
+.carousel-btn {
+  flex: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  padding: 0 2rem;
+}
+.header .div-logo .logo {
+  color: rgb(88, 202, 202);
+}
+.header .div-logo .logo .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 24;
+  font-size: 5rem;
+  transition: all 0.2s ease-in-out;
+}
+.header .div-logo .logo .material-symbols-outlined:hover {
+  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 24;
+  color: rgba(88, 202, 202, 0.8);
+}
+.header .div-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .div-nav nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 4rem;
+  padding: 0;
+}
+.header .div-nav nav ul li {
+  list-style-type: none;
+}
+.header .div-nav nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 300;
+  font-size: 1.1rem;
+  transition: color 0.2s ease-in-out;
+}
+.header .div-nav nav ul li a:hover {
+  color: rgb(88, 202, 202);
+}
+@media screen and (max-width: 1095px) {
+  .header .div-nav nav ul {
+    gap: 1rem;
+  }
+}
+.header .div-nav-btn {
+  display: none;
+}
+.header .div-nav-btn .nav-btn {
+  background: transparent;
+  border: none;
+}
+.header .div-nav-btn .nav-btn .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 24;
+  font-size: 5rem;
+  color: rgb(88, 202, 202);
+}
+.header .div-nav-btn .nav-btn:active {
+  color: rgb(202, 134, 88);
+}
+
+html {
+  scroll-padding: 5rem;
+  scroll-behavior: smooth;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 5.5rem;
+}
+.main .s-hero {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "h1 h2 h4" "h1 h3 h4";
+  grid-template-columns: 1.5fr 2fr 1.5fr;
+  grid-template-rows: repeat(2, 20rem);
+}
+.main .s-hero .div-titulo {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  width: 100%;
+  mix-blend-mode: lighten;
+}
+.main .s-hero .div-titulo h1 {
+  font-family: "Fleur De Leah", cursive;
+  font-weight: 100;
+  font-size: 4rem;
+  text-align: center;
+  background: rgb(88, 202, 202);
+  padding: 1rem;
+}
+.main .s-hero .div-titulo h1::first-letter {
+  font-size: 10rem;
+}
+.main .s-hero .div-hero {
+  min-height: 0;
+  overflow: hidden;
+}
+.main .s-hero .div-hero img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.main .s-hero .hero-1 {
+  grid-area: h1;
+}
+.main .s-hero .hero-2 {
+  grid-area: h2;
+}
+.main .s-hero .hero-2 img {
+  object-position: 0 30%;
+}
+.main .s-hero .hero-3 {
+  grid-area: h3;
+}
+.main .s-hero .hero-3 img {
+  object-position: 0 70%;
+}
+.main .s-hero .hero-4 {
+  grid-area: h4;
+}
+.main .s-promocion {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+.main .s-promocion .div-titulo {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.main .s-promocion .div-titulo h2 span {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 4rem;
+  font-weight: 100;
+}
+.main .s-promocion .div-titulo h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+  text-align: center;
+  line-height: 2.5rem;
+}
+.main .s-promocion .div-titulo h2::first-letter {
+  font-size: 10rem;
+}
+.main .s-promocion .div-promociones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .s-promocion .div-promociones .div-prom {
+  background: white;
+  padding: 1rem;
+  margin: 0;
+}
+.main .s-promocion .div-promociones .div-prom .card {
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18rem;
+  height: 100%;
+  background-color: rgb(88, 202, 202);
+  border-radius: 1rem;
+}
+.main .s-promocion .div-promociones .div-prom .card .card-img {
+  height: 12rem;
+  width: 100%;
+}
+.main .s-promocion .div-promociones .div-prom .card .card-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.main .s-promocion .div-promociones .div-prom .card .card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: white;
+}
+.main .s-promocion .div-promociones .div-prom .card .card-text h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.main .s-promocion .div-promociones .div-prom .card .card-text p {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 1rem 0;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+.main .s-promocion .div-promociones .div-prom .card .card-precio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .s-promocion .div-promociones .div-prom .card .card-precio p {
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+}
+@media screen and (max-width: 1380px) {
+  .main .s-promocion {
+    flex-direction: column;
+  }
+}
+.main .s-catalogo {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  background-color: rgba(88, 202, 202, 0.8);
+}
+.main .s-catalogo .div-titulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 5rem;
+  text-align: center;
+}
+.main .s-catalogo .div-titulo h2 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 4rem;
+  font-weight: 100;
+  padding-right: 0.5rem;
+}
+.main .s-catalogo .div-titulo h2::first-letter {
+  font-size: 10rem;
+}
+.main .s-catalogo .div-titulo p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+.main .s-catalogo .carousel {
+  --gap: 3rem;
+  --visibles: 4;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards {
+  display: flex;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p {
+  display: block;
+  height: 25rem;
+  border-radius: 1rem;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-img {
+  display: block;
+  height: 10rem;
+  width: 100%;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-img img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text {
+  padding: 1rem;
+  height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 0 0 1rem 1rem;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text h3 {
+  font-size: 1.2rem;
+  border-bottom: 1px solid white;
+  padding-bottom: 1rem;
+  color: rgb(88, 202, 202);
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text .tostion {
+  border-top: 1px solid white;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text .tostion .nivel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text .tostion .nivel .material-symbols-outlined {
+  font-size: 1rem;
+  color: rgb(88, 202, 202);
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text .tostion .nivel .i-sin {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 24;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text .tostion .nivel .i-con {
+  font-variation-settings: "FILL" 1, "wght" 300, "GRAD" -25, "opsz" 24;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .card-p .card-p-text .tostion p {
+  color: rgb(88, 202, 202);
+  font-weight: 600;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .c1 .card-p-img img {
+  object-position: 0 60%;
+}
+.main .s-catalogo .carousel .carousel-viewport .catalogo-cards .c2 .card-p-img img {
+  object-position: 0 90%;
+}
+.main .s-catalogo .carousel .carousel-btn {
+  flex: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: rgba(88, 202, 202, 0.8);
+}
+.main .s-catalogo .carousel .carousel-btn .material-symbols-outlined {
+  font-size: 5rem;
+}
+.main .s-conocenos {
+  padding: 4rem 4rem 15rem 4rem;
+  display: grid;
+  grid-template-areas: "div-titulo conocenos-img";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  column-gap: 2rem;
+}
+.main .s-conocenos .div-titulo {
+  grid-area: div-titulo;
+}
+.main .s-conocenos .div-titulo h2 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 4rem;
+  font-weight: 100;
+  padding-right: 0.5rem;
+}
+.main .s-conocenos .div-titulo h2::first-letter {
+  font-size: 10rem;
+}
+.main .s-conocenos .conocenos-img {
+  grid-area: conocenos-img;
+  position: relative;
+  height: 20rem;
+  width: 100%;
+}
+.main .s-conocenos .conocenos-img img {
+  position: absolute;
+  object-fit: cover;
+}
+.main .s-conocenos .conocenos-img .c-img-1 {
+  z-index: 3;
+  border: 10px solid white;
+  height: 100%;
+  width: 70%;
+  object-position: 0 60%;
+  top: 20%;
+  right: 0;
+}
+.main .s-conocenos .conocenos-img .c-img-2 {
+  z-index: 2;
+  border: 10px solid white;
+  height: 80%;
+  width: 50%;
+  top: 60%;
+  left: 5%;
+}
+.main .s-conocenos .conocenos-img .c-img-3 {
+  z-index: 5;
+  border: 10px solid white;
+  height: 70%;
+  width: 50%;
+  top: 0;
+  left: 0;
+}
+.main .s-conocenos .conocenos-img .c-img-4 {
+  z-index: 6;
+  border: 10px solid white;
+  height: 60%;
+  width: 40%;
+  top: 100%;
+  left: 50%;
+}
+.main .s-encuentranos {
+  padding: 6rem 4rem;
+  position: relative;
+  display: grid;
+  grid-template-areas: "titulo horarios mapa";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 2rem;
+  width: 100%;
+  height: 30rem;
+}
+.main .s-encuentranos .bg-section {
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+.main .s-encuentranos .bg-section img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.main .s-encuentranos .div-titulo {
+  grid-area: titulo;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.main .s-encuentranos .div-titulo h2 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 4rem;
+  font-weight: 100;
+  padding-right: 0.5rem;
+  color: white;
+  text-align: start;
+}
+.main .s-encuentranos .div-titulo h2::first-letter {
+  font-size: 10rem;
+}
+.main .s-encuentranos .horario {
+  z-index: 1;
+  grid-area: horarios;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border: 10px solid white;
+  background: rgba(255, 255, 255, 0.5);
+}
+.main .s-encuentranos .horario .div-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .s-encuentranos .horario .div-titulo h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+.main .s-encuentranos .horario .div-horario {
+  display: flex;
+  justify-content: center;
+}
+.main .s-encuentranos .horario .div-horario ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.main .s-encuentranos .horario .div-horario ul li .dias {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main .s-encuentranos .horario .div-horario ul li .hora {
+  font-size: 2rem;
+}
+.main .s-encuentranos .div-mapa {
+  grid-area: mapa;
+  z-index: 1;
+  height: 20rem;
+}
+.main .s-encuentranos .div-mapa iframe {
+  height: 22rem;
+  width: 20rem;
+  border: 10px solid white;
+  opacity: 0.9;
+}
+.main .s-opiniones {
+  padding: 4rem 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .s-opiniones .div-titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .s-opiniones .div-titulo h2 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 4rem;
+  font-weight: 100;
+  padding-right: 0.5rem;
+}
+.main .s-opiniones .div-titulo h2::first-letter {
+  font-size: 10rem;
+}
+.main .s-opiniones .carousel {
+  --visibles: 3;
+  --gap: 1rem;
+}
+.main .s-opiniones .carousel .carousel-viewport .div-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.main .s-opiniones .carousel .carousel-viewport .div-cards .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 18rem;
+  background: rgba(88, 202, 202, 0.3);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: all 0.5s ease-in-out;
+}
+.main .s-opiniones .carousel .carousel-viewport .div-cards .card .nombre p {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 3rem;
+  color: rgb(88, 202, 202);
+}
+.main .s-opiniones .carousel .carousel-viewport .div-cards .card .valoracion .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 200, "GRAD" -25, "opsz" 24;
+  color: rgb(88, 202, 202);
+}
+.main .s-opiniones .carousel .carousel-viewport .div-cards .card .opinion {
+  text-align: center;
+  overflow-wrap: break-word;
+  font-weight: 300;
+}
+.main .s-opiniones .carousel .carousel-viewport .div-cards .card:hover {
+  background: rgba(88, 202, 202, 0.1);
+}
+.main .s-opiniones .carousel .carousel-btn {
+  flex: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: rgba(88, 202, 202, 0.8);
+}
+.main .s-opiniones .carousel .carousel-btn .material-symbols-outlined {
+  font-size: 5rem;
+}
+.main .s-contacto {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-areas: "div-titulo div-form";
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  column-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 35rem;
+}
+.main .s-contacto .bg-contacto {
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.main .s-contacto .bg-contacto img {
+  object-fit: cover;
+  object-position: 0 50%;
+  height: 100%;
+  width: 100%;
+}
+.main .s-contacto .div-titulo {
+  z-index: 3;
+  grid-area: div-titulo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .s-contacto .div-titulo h2 {
+  font-family: "Fleur De Leah", cursive;
+  font-size: 4rem;
+  font-weight: 100;
+  color: white;
+}
+.main .s-contacto .div-titulo h2::first-letter {
+  font-size: 10rem;
+}
+.main .s-contacto .div-form {
+  z-index: 3;
+  grid-area: div-form;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .s-contacto .div-form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: rgb(88, 202, 202);
+  width: 100%;
+}
+.main .s-contacto .div-form form input {
+  text-align: center;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  width: 50%;
+  background: rgba(88, 202, 202, 0.7);
+  transition: all 0.2s ease-in-out;
+}
+.main .s-contacto .div-form form input::placeholder {
+  color: white;
+}
+.main .s-contacto .div-form form input:focus {
+  background: rgba(88, 202, 202, 0.8);
+  outline: none;
+}
+.main .s-contacto .div-form form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 0.5rem;
+  border: none;
+  color: rgb(88, 202, 202);
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: all 0.2s ease-in-out;
+}
+.main .s-contacto .div-form form button:hover {
+  background: rgb(88, 202, 202);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer {
+  padding: 6rem 4rem;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(88, 202, 202, 0.2);
+  color: rgb(88, 202, 202);
+}
+.footer .f-contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.footer .f-contacto p {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 1rem;
+  gap: 1rem;
+  text-align: start;
+}
+.footer .f-contacto p:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .f-contacto p .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 24;
+  font-size: 1.8rem;
+}
+.footer .f-nav {
+  display: flex;
+  align-items: center;
+}
+.footer .f-nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.footer .f-nav ul li {
+  list-style-type: none;
+}
+.footer .f-nav ul li a {
+  text-decoration: none;
+  color: rgb(88, 202, 202);
+  font-weight: 500;
+}
+.footer .f-nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .f-redes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+.footer .f-redes p {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+}
+.footer .f-redes p:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .f-redes p .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 24;
+  font-size: 2rem;
+}
+.footer .f-derechos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.footer .f-derechos .div-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .f-derechos .div-logo .logo {
+  display: flex;
+  align-items: center;
+  font-family: "Fleur De Leah", cursive;
+  font-size: 3rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(88, 202, 202);
+  transition: color 0.6s ease-in-out;
+}
+.footer .f-derechos .div-logo .logo .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" -25, "opsz" 24;
+  font-size: 6rem;
+  color: rgb(88, 202, 202);
+  transition: color 0.6s ease-in-out;
+}
+.footer .f-derechos .div-logo:hover .logo {
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .f-derechos .div-logo:hover .material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" -25, "opsz" 24;
+  color: rgba(255, 255, 255, 0.5);
+}
+.footer .f-derechos .div-derechos {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.footer .f-derechos .div-derechos p {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(88, 202, 202);
+  transition: all 0.5s ease-in-out;
+}
+.footer .f-derechos .div-derechos p .material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 300, "GRAD" -25, "opsz" 24;
+  font-size: 1.5rem;
+  transition: all 0.5s ease-in-out;
+}
+.footer .f-derechos .div-derechos p:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */

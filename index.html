@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/coffee.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=coffee,menu,circle,star,phone_enabled,mail,map,nest_clock_farsight_analog,copyright,filter_center_focus,account_circle,chevron_left,chevron_right" />
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/main.js"></script>
+    <title>Prototipo Cafetería</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="div-logo">
+            <a href="index.html" class="logo">
+                <span class="material-symbols-outlined coffee">
+                    coffee
+                </span>
+            </a>
+        </div>
+        <div class="div-nav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#favoritos">Favoritos</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#conocenos">Conócenos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="div-nav-btn">
+            <button class="nav-btn">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="s-hero">
+            <div class="div-titulo">
+                <h1>Cafetería de especialidad</h1>
+            </div>
+            <div class="div-hero hero-1">
+                <img src="/img/shawn-nmpW_WwwVSc-unsplash.jpg" alt="">
+            </div>
+            <div class="div-hero hero-2">
+                <img src="/img/louis-hansel-vD9gZXbmRP4-unsplash.jpg" alt="">
+            </div>
+            <div class="div-hero hero-3">
+                <img src="/img/amin-ramezani-y0AidJiSbSs-unsplash.jpg" alt="">
+            </div>
+            <div class="div-hero hero-4">
+                <img src="/img/sera-iZgQKxuMRHc-unsplash.jpg" alt="">
+            </div>
+        </section>
+        <section class="s-promocion" id="favoritos">
+            <div class="div-titulo">
+                <h2><span>Favoritos</span> <br>de la casa</h2>
+            </div>
+            <div class="div-promociones">
+                <div class="div-prom prom-1">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/santiago-vilchis-EzuNmyTnA3s-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>Cata de Café</h3>
+                            <p>Prueba nuestras variedades en pequeño formato y aprende sobre el café.</p>
+                        </div>
+                        <div class="card-precio">
+                            <p>$6.000.-</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-prom prom-2">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/nathan-dumlao-gOn7dKcCWKg-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>2 Café + pastel</h3>
+                            <p>Comparte un momento con quien quieras con 2 cafés a elección y 1 pastel del día.</p>
+                        </div>
+                        <div class="card-precio">
+                            <p>$6.000.-</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="div-prom prom-3">
+                    <div class="card">
+                        <div class="card-img">
+                            <img src="/img/nik-demidko-UJynGW4gF-I-unsplash.jpg" alt="">
+                        </div>
+                        <div class="card-text">
+                            <h3>¡Te celebramos!</h3>
+                            <p>Obten un 20% de descuento para el total de tu mesa en el día de tu cumpleaños.</p>
+                        </div>
+                        <div class="card-precio">
+                            <p>-20%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="s-catalogo" id="catalogo">
+            <div class="div-titulo">
+                <h2>Café del mundo</h2>
+                <p>Encuéntralos en nuestra tienda</p>
+            </div>
+            <div class="carousel">
+                <button class="carousel-btn prev" aria-label="Anterior">
+                     <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+
+                <div class="carousel-viewport">
+                    <div class="catalogo-cards carousel-track">
+                        <div class="card-p c1">
+                            <div class="card-p-img">
+                                <img src="/img/manuel-aldana-9SfiV64eB5g-unsplash.jpg" alt="">
+                            </div>
+                            <div class="card-p-text">
+                                <h3 class="card-titulo">Café Guatemala</h3>
+                                <p>Café del valle con notas a fresa.</p>
+                                <div class="tostion">
+                                    <div class="nivel">
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-sin">
+                                            circle
+                                        </span>
+                                    </div>
+                                    <p>Tostión Media</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-p c2">
+                            <div class="card-p-img">
+                                <img src="/img/edwin-sarmiento-61WALcPnAQQ-unsplash.jpg" alt="">
+                            </div>
+                            <div class="card-p-text">
+                                <h3 class="card-titulo">Café Colombia</h3>
+                                <p>Café del valle con notas a chocolate.</p>
+                                <div class="tostion">
+                                    <div class="nivel">
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                    </div>
+                                    <p>Tostión Fuerte</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-p c3">
+                            <div class="card-p-img">
+                                <img src="/img/george-dagerotip-XRY4giMaDoA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="card-p-text">
+                                <h3 class="card-titulo">Café Perú</h3>
+                                <p>Café del valle con notas a mango.</p>
+                                <div class="tostion">
+                                    <div class="nivel">
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-sin">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-sin">
+                                            circle
+                                        </span>
+                                    </div>
+                                    <p>Tostión Suave</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-p c4">
+                            <div class="card-p-img">
+                                <img src="/img/pariwat-pannium-S8daAB_nJSg-unsplash.jpg" alt="">
+                            </div>
+                            <div class="card-p-text">
+                                <h3 class="card-titulo">Café Brasil</h3>
+                                <p>Café del valle con notas a Acai.</p>
+                                <div class="tostion">
+                                    <div class="nivel">
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-sin">
+                                            circle
+                                        </span>
+                                    </div>
+                                    <p>Tostión Media</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-p c5">
+                            <div class="card-p-img">
+                                <img src="/img/kris-tian-SchhlUlCNj8-unsplash.jpg" alt="">
+                            </div>
+                            <div class="card-p-text">
+                                <h3 class="card-titulo">Café Etiopía</h3>
+                                <p>Café del valle con notas a berries.</p>
+                                <div class="tostion">
+                                    <div class="nivel">
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                    </div>
+                                    <p>Tostión Fuerte</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-p c6">
+                            <div class="card-p-img">
+                                <img src="/img/marc-buddha-beans-coffee-co-xZZbJo3XABA-unsplash.jpg" alt="">
+                            </div>
+                            <div class="card-p-text">
+                                <h3 class="card-titulo">Café México</h3>
+                                <p>Café del valle con notas a berries.</p>
+                                <div class="tostion">
+                                    <div class="nivel">
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-con">
+                                            circle
+                                        </span>
+                                        <span class="material-symbols-outlined i-sin">
+                                            circle
+                                        </span>
+                                    </div>
+                                    <p>Tostión Media</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" aria-label="Siguiente">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </section>
+        <section class="s-conocenos" id="conocenos">
+            <div class="div-titulo">
+                <h2>Sobre nosotros</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum, cumque rem eum optio nobis facilis itaque et animi provident fuga, atque deleniti error dicta excepturi aperiam. Nisi explicabo quae a praesentium, dolorum eaque facere molestias, odit consequatur harum, neque nobis porro quibusdam? Temporibus numquam laudantium itaque harum beatae natus.</p>
+                
+            </div>
+            <div class="conocenos-img">
+                <img class="c-img-1" src="/img/shawn-nmpW_WwwVSc-unsplash.jpg" alt="">
+                <img class="c-img-2" src="/img/jon-tyson-t1pICUKHIFM-unsplash.jpg" alt="">
+                <img class="c-img-3" src="/img/joshua-rodriguez-f7zm5TDOi4g-unsplash.jpg" alt="">
+                <img class="c-img-4" src="/img/nam-quach-6w4kSBnoYPI-unsplash.jpg" alt="">
+            </div>
+        </section>
+        <section class="s-encuentranos">
+            <div class="bg-section">
+                <img src="/img/shawn-nmpW_WwwVSc-unsplash.jpg" alt="">
+            </div>
+            <div class="div-titulo">
+                <h2>Encuéntranos</h2>
+            </div>
+            <div class="horario">
+                <div class="div-titulo">
+                    <h3>Horarios de atención</h3>
+                </div>
+                <div class="div-horario">
+                    <ul>
+                        <li>
+                            <p class="dias">Lunes a Viernes</p>
+                            <p class="hora">08:00 - 20:00</p>
+                        </li>
+                        <li>
+                            <p class="dias">Sábado y Domingo</p>
+                            <p class="hora">10:00 a 17:30</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="div-mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2923.9830785056097!2d-8.551111585825067!3d42.87320130404982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2efe1559b3c32d%3A0x4a17f35e36897cfa!2sC.%20de%20Fray%20Rosendo%20Salvado%2C%208%2C%2015701%20Santiago%20de%20Compostela%2C%20La%20Coru%C3%B1a%2C%20Espa%C3%B1a!5e0!3m2!1ses!2scl!4v1795131350585!5m2!1ses!2scl" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </section>
+        <section class="s-opiniones">
+            <div class="div-titulo">
+                <h2>Nuestros clientes</h2>
+            </div>
+            <div class="s-opiniones-carousel carousel">
+                <button class="carousel-btn prev" aria-label="Anterior">
+                    <span class="material-symbols-outlined">chevron_left</span>
+                </button>
+
+                <div class="carousel-viewport">
+                    <div class="div-cards carousel-track">
+                        <div class="card">
+                            <div class="nombre">
+                                <p>Julio</p>
+                            </div>
+                            <div class="valoracion">
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <div class="opinion">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia voluptates optio quod neque fugit fuga illum, excepturi tenetur. Nihil.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="nombre">
+                                <p>Vanessa</p>
+                            </div>
+                            <div class="valoracion">
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <div class="opinion">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia voluptates optio quod neque fugit fuga illum, excepturi tenetur. Nihil.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="nombre">
+                                <p>Patricio</p>
+                            </div>
+                            <div class="valoracion">
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <div class="opinion">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia voluptates optio quod neque fugit fuga illum, excepturi tenetur. Nihil.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="nombre">
+                                <p>Fran</p>
+                            </div>
+                            <div class="valoracion">
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <div class="opinion">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia voluptates optio quod neque fugit fuga illum, excepturi tenetur. Nihil.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="nombre">
+                                <p>Matías</p>
+                            </div>
+                            <div class="valoracion">
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                                <span class="material-symbols-outlined">star</span>
+                            </div>
+                            <div class="opinion">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam officia voluptates optio quod neque fugit fuga illum, excepturi tenetur. Nihil.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-btn next" aria-label="Siguiente">
+                    <span class="material-symbols-outlined">chevron_right</span>
+                </button>
+            </div>
+        </section>
+        <section class="s-contacto" id="contacto">
+            <div class="bg-contacto">
+                <img src="/img/joshua-rodriguez-f7zm5TDOi4g-unsplash.jpg" alt="">
+            </div>
+            <div class="div-titulo">
+                <h2>Contáctanos</h2>
+            </div>
+            <div class="div-form">
+                <form action="" method="post">
+                    <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+                    <input type="tel" name="telefono" id="telefono" placeholder="Escribe tu teléfono">
+                    <input type="email" name="mail" id="mail" placeholder="Escribe tu correo">
+                    <input type="text" name="mensaje" id="mensaje" placeholder="Escribe un mensaje">
+                    <button>Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="f-box f-contacto">
+            <p><span class="material-symbols-outlined">phone_enabled</span> +452369875256</p>
+            <p><span class="material-symbols-outlined">mail</span> nicole@nicole.cl</p>
+            <p><span class="material-symbols-outlined">map</span> Calle Celeste #248, Sarmientos</p>
+            <p><span class="material-symbols-outlined">nest_clock_farsight_analog</span> Lun a Vier 08:00 a 20:00 <br> Sáb y Dgo 10:00 a 17:30</p>           
+            
+        </div>
+        <div class="f-box f-nav">
+            <ul>
+                <li><a href="index.html">Inicio</a></a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#conocenos">Conócenos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="f-box f-redes">
+            <p><span class="material-symbols-outlined">filter_center_focus</span> Instagram</p>
+            <p><span class="material-symbols-outlined">account_circle</span>Facebook</p>
+        </div>
+        <div class="f-box f-derechos">
+            <div class="div-logo">
+                <a href="index.html" class="logo"> 
+                    <span class="material-symbols-outlined coffee">coffee</span>
+                    Café de especialidad
+                </a>
+            </div>
+            <div class="div-derechos">
+                <p><span class="material-symbols-outlined">copyright</span> Prototipo desarrollado por Nicole Velásquez</p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>

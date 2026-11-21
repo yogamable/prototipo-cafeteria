@@ -1,0 +1,85 @@
+.header{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    width: 100%;
+    padding: 0 2rem;
+    .div-logo{
+        .logo{
+            color: rgb(88, 202, 202);
+            .material-symbols-outlined {
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 100,
+                'GRAD' -25,
+                'opsz' 24;
+                font-size: 5rem;
+                transition: all .2s ease-in-out;
+
+                &:hover{
+                    font-variation-settings:
+                    'FILL' 1,
+                    'wght' 100,
+                    'GRAD' -25,
+                    'opsz' 24;
+                    color: rgb(88, 202, 202, .8);
+                }
+            }
+        }
+    }
+    .div-nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 4rem;
+            padding: 0;
+            
+            li{
+                list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 300;
+                    font-size: 1.1rem;
+                    transition: color .2s ease-in-out;
+                    &:hover{
+                        color: rgb(88, 202, 202);
+                    }
+                }
+            }
+
+            @media screen and (max-width:1095px) {
+                gap: 1rem;
+            }
+
+        }
+    }
+    .div-nav-btn{
+        display: none;
+        .nav-btn{
+            background: transparent;
+            border: none;
+
+            .material-symbols-outlined {
+                font-variation-settings:
+                'FILL' 0,
+                'wght' 100,
+                'GRAD' -25,
+                'opsz' 24;
+                font-size: 5rem;
+                color: rgb(88, 202, 202);
+            }
+
+            &:active{
+                color: rgb(202, 134, 88);
+            }
+        }
+    }
+}

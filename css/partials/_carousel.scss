@@ -1,0 +1,35 @@
+.carousel {
+  --gap: 1.5rem;
+  --visibles: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @media (max-width: 768px) {
+    --visibles: 1;
+  }
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+}
+
+.carousel-track {
+  display: flex;
+  gap: var(--gap);
+  will-change: transform;
+
+  > * {
+    flex: 0 0 calc((100% - var(--gap) * (var(--visibles) - 1)) / var(--visibles));
+    min-width: 0;
+  }
+}
+
+.carousel-btn {
+  flex: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
