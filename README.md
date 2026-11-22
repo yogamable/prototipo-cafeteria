@@ -1,7 +1,5 @@
 # Prototipo de Sitio Web para Cafetería
 
-![Vista previa del sitio](docs/preview.png)
-
 ## Descripción del proyecto
 
 Diseño y desarrollo de un prototipo de sitio web para una cafetería, orientado a presentar sus productos y su propuesta visual en una experiencia de una sola página, agradable de recorrer y fácil de usar.
